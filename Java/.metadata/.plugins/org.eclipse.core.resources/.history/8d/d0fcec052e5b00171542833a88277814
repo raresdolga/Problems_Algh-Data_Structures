@@ -1,0 +1,8 @@
+package ex4_Ch2;
+
+public class Partition {
+
+	public static void main(String args[]){
+		
+	}
+}

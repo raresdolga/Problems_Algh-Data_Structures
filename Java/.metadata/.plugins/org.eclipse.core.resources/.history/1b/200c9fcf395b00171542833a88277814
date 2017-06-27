@@ -1,0 +1,25 @@
+package ex4_Ch2;
+
+import java.util.Scanner;
+public class Partition {
+	private void reorganize(Node<Integer> lastElem, Node<Integer> head, int partition){
+		Node<Integer> current = head;
+		Node<Integer> dummy = null;
+		while(current != null){
+			if(current.data > partition){
+				
+			}
+		}
+	}
+	public static void main(String args[]){
+		Scanner in = new Scanner(System.in);
+		Node<Integer> head = new Node<Integer>(in.nextInt());
+		Node<Integer> t = head;
+		while(in.hasNextInt()){
+			Node<Integer> aux = new Node<Integer>(in.nextInt());
+			t.setNext(aux);
+			t = aux;
+		}
+		
+	}
+}

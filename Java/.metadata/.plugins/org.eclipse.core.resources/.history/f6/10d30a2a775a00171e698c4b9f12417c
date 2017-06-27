@@ -1,0 +1,10 @@
+package ex1_Ch2;
+
+public class DuplicateLinkedList {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,49 @@
+package ex3_Ch2;
+
+import java.util.Scanner;
+
+public class Remove {
+
+	private Node<Integer> nod ;
+	private void remove(Node <Integer> n){
+		if( n == null || n.next == null ){
+			System.out.println("could not delete");
+			return;
+		}
+		Node<Integer> aux = n.next;
+	
+		n.data = aux.data;
+		//delet aux;
+		n.next = aux.next;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		
+		Node<Integer> head = new Node<Integer>(in.nextInt());
+		/* insert at head :
+		Node<Integer> t = null;
+		*/
+		// insert at the end:
+		Node<Integer> t = head;
+		int val;
+		while(in.hasNextInt()){
+			val = in.nextInt();
+			/* insert at head :
+			 t = new Node<Integer>(val,t,head);
+			Insrt at the end:
+			t = new Node<Integer>(val,null,t);
+			Doubly linked List*/
+			//Simple Linked List:
+			Node <Integer> aux  = new Node<Integer>(val);
+			t.next = aux;
+			t = aux;
+		}
+		Node<Integer> current = head;
+		while(current != null){
+			System.out.println(current.data);
+			current = current.next;
+		}
+	}
+
+}

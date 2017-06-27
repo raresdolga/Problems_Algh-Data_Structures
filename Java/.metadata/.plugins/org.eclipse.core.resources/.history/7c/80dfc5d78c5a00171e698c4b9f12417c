@@ -1,0 +1,10 @@
+package ex2_Ch2;
+
+public class KthToEnd {
+private int lastToK();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

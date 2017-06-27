@@ -1,0 +1,55 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Concat {
+	private int count(int index, String s){
+		int counter = 0;
+		char c = s.charAt(index);
+		while(index < s.length() && c == s.charAt(index)){
+			counter ++;
+		}
+		return counter;
+	}
+	private StringBuilder construct(String s){
+		StringBuilder b = new StringBuilder();
+		int i = 0;
+		int freq = 0;
+		while(i < s.length()){
+			freq = count(i, s);
+			b.append(freq+s.charAt(i));
+			i += freq;
+		}
+		return b;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BufferedReader in = null;
+		
+		try {
+
+			in = new BufferedReader(new InputStreamReader(System.in));
+			String s;
+			while((s = in.readLine()) != null){
+				Concat compress = new Concat();
+				System.out.println("maz");
+				StringBuilder rez = compress.construct(s);
+		//		System.out.println("maz");
+				System.out.println(rez+"maz");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}finally{
+			try {
+				in.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				System.out.println(e.getMessage());
+			}
+		}
+		
+
+	}
+
+}
