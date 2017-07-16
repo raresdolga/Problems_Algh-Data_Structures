@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1500065411 source:d:\users\rares\documents\algorithm_questions\c++\ex1_ch3_3stacks\main.cpp
+	<iostream>
+	<stdlib.h>
+

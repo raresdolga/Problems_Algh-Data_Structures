@@ -1,0 +1,10 @@
+package ex7_Ch2;
+
+public class Intersect {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

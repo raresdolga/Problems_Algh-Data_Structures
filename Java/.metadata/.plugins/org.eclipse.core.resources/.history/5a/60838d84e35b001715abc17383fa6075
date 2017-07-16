@@ -1,0 +1,12 @@
+package ex7_Ch2;
+
+public class Intersect {
+	private void checkIntersection(Node<Integer> head1, Node<Integer> head2){
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

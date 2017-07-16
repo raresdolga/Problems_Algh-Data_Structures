@@ -1,0 +1,8 @@
+package ex7_Ch2;
+
+public class Snippet {
+	public static void main(String[] args) {
+		System.out.println(current.data + " " + list.data);
+	}
+}
+

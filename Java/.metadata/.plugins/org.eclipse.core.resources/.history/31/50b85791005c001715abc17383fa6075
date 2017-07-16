@@ -1,0 +1,10 @@
+package ex8_Ch2;
+
+public class Circular {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
