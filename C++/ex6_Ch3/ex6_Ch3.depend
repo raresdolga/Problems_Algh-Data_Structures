@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1500328132 source:d:\users\rares\documents\algorithm_questions\c++\ex6_ch3\main.cpp
+	<iostream>
+	<stdlib.h>
+
