@@ -40,8 +40,8 @@ void inOrder(node_t *root) {
 void preOrder(node_t *root) {
     if(root != NULL) {
         cout<< root -> data <<"\n";
-        inOrder(root -> left);
-        inOrder(root -> right);
+        preOrder(root -> left);
+        preOrder(root -> right);
     }
 }
 int main()
