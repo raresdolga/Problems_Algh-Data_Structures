@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1500896772 source:d:\users\rares\documents\algorithm_questions\c++\ex6_ch5\binarytree.cpp
+	<bits/stdc++.h>
+
+1500896755 source:d:\users\rares\documents\algorithm_questions\c++\ex6_ch5\main.cpp
+	<bits/stdc++.h>
+	"BinaryTree.h"
+
+1500896326 d:\users\rares\documents\algorithm_questions\c++\ex6_ch5\binarytree.h
+
