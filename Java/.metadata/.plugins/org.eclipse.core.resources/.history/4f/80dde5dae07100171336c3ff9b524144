@@ -1,0 +1,44 @@
+
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
+public class Graph<T extends Comparable<T>> {
+	private ArrayList<Node<T>> nodes;
+	
+	public Graph() {
+		nodes = new ArrayList<>();
+	}
+	
+	public void addNode(Node<T> n) {
+		nodes.add(n);
+	}
+	
+	
+	public ArrayList<Node<T>> getNodes() {
+		return new ArrayList<Node<T>>(nodes);
+	}
+	
+	public void setIncomming(){
+		ArrayList<Node<T>> children;
+		for(Node<T> child : nodes){
+			children = child.neigh;
+			for(Node<T> node : children) {
+				// reuse of child variable
+				node.incrementInbound();
+			}
+		}
+	}
+	
+	public Queue<Node<T>> getNoIncomming_Nodes(HashMap<Node<T>,Boolean> visited) {
+		Queue<Node<T>> noInc = new  LinkedList<Node<T>> ();
+		for(Node<T> child : nodes){
+			if(child.getInbound() == 0 && !visited.get(child))
+				noInc.add(child);
+		}
+		return noInc;
+	}
+}

@@ -1,0 +1,14 @@
+package ex7_Ch4;
+
+import java.util.ArrayList;
+
+public class Node<T extends Comparable<T>> {
+	protected T value;
+	protected ArrayList<T> neigh;
+	
+	public Node(T value, ArrayList<T> neigh) {
+		this.value = value;
+		this.neigh = neigh;
+	}
+}
+

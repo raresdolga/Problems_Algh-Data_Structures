@@ -1,0 +1,13 @@
+6
+a :
+d
+b:
+d
+c:
+NULL
+d:
+c
+e:
+NULL
+f:
+b a
