@@ -1,0 +1,16 @@
+package ex11_ch4;
+
+public class Node {
+	public Node left;
+	public Node right;
+	public int data;
+	
+	private int size = 0;
+	public Node(int data, Node left, Node right){
+		this.data = data;
+		this.left = left;
+		this.right = right;
+		size = 1;
+	}
+	
+}

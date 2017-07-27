@@ -1,0 +1,26 @@
+package ex10_Ch10;
+
+public class Subtree {
+
+	public boolean checkSubTree(Node root1, Node root2) {
+		if(root1 == null) return false;
+		if(root1.data == root2.data){
+			if(checkRest(root1,root2))
+					return true;
+		}
+		return checkSubTree(root1.left, root2) || checkSubTree(root1.right,root2);
+	}
+	public boolean checkRest(Node root1, Node root2){
+		if(root2 == null) return true;
+		
+		if(root1.data == root2.data)
+			return checkRest(root1.left, root2.left) && checkRest(root1.right, root2.right);
+		else
+			return false;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

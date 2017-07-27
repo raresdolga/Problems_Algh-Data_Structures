@@ -1,0 +1,8 @@
+package ex9_Ch4;
+
+public class NodeBS {
+	public int val;
+	public NodeBS left;
+	public NodeBS right;
+	
+}

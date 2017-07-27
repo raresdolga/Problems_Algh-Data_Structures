@@ -1,0 +1,10 @@
+package ex11_ch4;
+
+public class Rabdom {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
