@@ -1,0 +1,48 @@
+package ex1_ch5;
+
+public class BitInsertion {
+	//when we count position we start from left to right not from right as normal
+	
+	public int updateBit(int n, int pos, int val) {
+		//val must be 0 or 1 = 000...0 (32 digits) or 000...1(32 digits) so we can shift by pos <= 32
+		int mask = ~(1 << pos);
+		// first free the position of val by using 0
+		return (mask & n) | (val << pos);
+		
+	}
+	
+	public int getBit(int n, int pos) {
+		int mask = 1 << pos;
+		//we make a num with 1 just on pos rest is 0, depending on the pos bit we obtain nr 1 or 0
+		return (n & mask) != 0 ? 1 : 0;
+	}
+	
+	public int InsertInt(int a, int b, int pos1, int pos2) {
+		/*insert b in a
+		b has 32 bits but first of them are 0 and the actual number's length <= pos2 - pos1 + 1
+		So we can safely shift be to left by pos2  
+		 */
+		//b = b << pos2;
+		int val;
+		for(int count = pos2; count >= pos1; count-- ){
+		   val = getBit(b,count);
+			a = updateBit(a,count,val);
+		}
+		return a;
+	}
+	
+	void afisBitF(int n){
+		int i, mask;
+		//start from the right
+		for(i = 31; i >= 0; i--){
+			mask = 1 << i;
+			System.out.println( (n & mask) != 0 ? 1 : 0);
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BitInsertion obj = new BitInsertion();
+		obj.afisBitF(5);
+	}
+
+}

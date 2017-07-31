@@ -1,0 +1,18 @@
+package ex2_ch5;
+
+public class doubleToBin {
+	public String toBin(double m) {
+		if(m <= 0 || m >= 1) {
+			return "ERROR";
+		}
+		StringBuilder a = new tringBuilder();
+		while(m > 0) {
+			
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

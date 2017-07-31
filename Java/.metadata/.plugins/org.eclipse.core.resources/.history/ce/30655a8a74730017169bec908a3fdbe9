@@ -1,0 +1,14 @@
+package ex12_ch4;
+
+public class BSTree {
+	Node root = null;
+ public void insertBS(int data){
+		if(root == null)
+			root = new Node(data,null,null);
+		insert(data);
+	}
+	
+ 	private void insert(int data) {
+ 		
+ 	}
+}

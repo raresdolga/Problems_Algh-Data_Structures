@@ -15,7 +15,7 @@ public class Node {
 	public Node getIthNode(int i) {
 		int leftSize = left == null ? 0 : left.size;
 		if(i < leftSize) {
-			return left.getIthNode(leftSize);
+			return left.getIthNode(i);
 		}
 		else
 			if(i == leftSize) {
