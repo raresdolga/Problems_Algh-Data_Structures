@@ -20,6 +20,7 @@ public class Flip {
 			}
 			else
 				current += 1;
+			//>>> does not preserve the sign just  move on
 			n = n >>> 1;
 		}
 		return max;

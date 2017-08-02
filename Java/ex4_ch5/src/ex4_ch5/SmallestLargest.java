@@ -12,14 +12,14 @@ public class SmallestLargest {
 			c0 ++;
 		}
 		//count nr of 1 after the first non-terminal 0 (right to left)
-		while( (c & 1) == 1 && (c != 0)) {
+		while( (c & 1) == 1 && (c != 0) && c1 < 32) {
 			c1 ++;
 			// put on the right the value of the
 			c = c >> 1;
 		}
 		int pos = c1 + c0;
 		// the nr is 111000 or 111111 = ~0 or 0 then there is no bigger nr with the same nr of ones
-		if(pos == 0 || pos == 31)
+		if(pos == 0 || pos >= 31)
 			return -1;
 		//flip first non terminal 0
 		n = n | (1 << pos);
@@ -40,8 +40,9 @@ public class SmallestLargest {
 		int c1 = 0;
 		int c0 = 0;
 		// go until meet first 0 ( count lasts ones)
-		while((c | 0) == 1 && c != 0) {
+		while((c | 0) == 1 && c != 0 & c1 < 32) {
 			c1 ++;
+			// >> preservs the sign bit
 			c >>= 1;
 		}
 		// count nr of right (last) zeros before meet "1" -bit 
@@ -50,8 +51,8 @@ public class SmallestLargest {
 			c >>= 1;
 		}
 		int pos = c1 + c0;
-		if(pos == 0 || pos == 31){
-			return -2;
+		if(pos == 0 || pos >= 31){
+			return -1;
 		}
 		n = n & ~(1 << pos);
 		int a = 1 << (pos - 1);
@@ -65,7 +66,7 @@ public class SmallestLargest {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SmallestLargest obj = new SmallestLargest();
-		System.out.println(obj.getBigger(45));
+		System.out.println(obj.getBigger(-1));
 	}
 
 }

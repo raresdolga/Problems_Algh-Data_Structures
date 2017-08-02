@@ -1,0 +1,10 @@
+package ex7_Ch5;
+
+public class Swap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
