@@ -1,7 +1,0 @@
-package ex8_Ch4More_effic;
-
-public class Node {
-	public Node left;
-	public Node right;
-	public int val;
-}

@@ -1,9 +1,0 @@
-package ex4_ch5
-public class SmallestLargest {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
-}

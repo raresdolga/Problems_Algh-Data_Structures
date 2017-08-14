@@ -1,0 +1,12 @@
+package ex2_ch7;
+
+import java.util.ArrayList;
+
+public class OperatingCentral {
+	private ArrayList<Call> calls = new ArrayList<Call>();
+	private int nr_respond = 16;
+	private int nr_manager = 4;
+	private int nr_director = 2;
+	
+	
+}

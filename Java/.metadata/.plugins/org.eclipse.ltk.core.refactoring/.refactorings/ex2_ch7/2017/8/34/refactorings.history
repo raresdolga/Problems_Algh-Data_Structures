@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;ex2_ch7.Respondent.free&apos; in &apos;ex2_ch7.Respondent&apos;&#x0D;&#x0A;- Original project: &apos;ex2_ch7&apos;&#x0D;&#x0A;- Original element: &apos;ex2_ch7.Respondent.free&apos;&#x0D;&#x0A;- Getter method name: &apos;getFree&apos;&#x0D;&#x0A;- Setter method name: &apos;setFree&apos;&#x0D;&#x0A;- Field visibility: &apos;private&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;free&apos;" flags="589830" getter="getFree" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;ex2_ch7{Respondent.java[Respondent^free" insertion="-1" setter="setFree" stamp="1502717251827" version="1.0" visibility="2"/>
+</session>

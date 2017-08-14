@@ -1,7 +1,0 @@
-package ex12_ch4;
-
-public class Node {
-	public Node left;
-	public Node right;
-	public int data;
-}
