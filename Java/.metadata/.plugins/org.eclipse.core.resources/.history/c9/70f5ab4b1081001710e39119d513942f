@@ -1,0 +1,10 @@
+package ex3_Ch7;
+
+public class Machine {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

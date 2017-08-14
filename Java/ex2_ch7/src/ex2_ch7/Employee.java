@@ -7,6 +7,13 @@ public abstract class Employee {
 	public String rank;
 	private boolean free;
 
+	public Employee(int age, String name, String adress, String rank){
+		this.age = age;
+		this.name = name;
+		this.adress = adress;
+		this.rank = rank;
+		free = true;
+	}
 	public boolean getFree() {
 		return free;
 	}
