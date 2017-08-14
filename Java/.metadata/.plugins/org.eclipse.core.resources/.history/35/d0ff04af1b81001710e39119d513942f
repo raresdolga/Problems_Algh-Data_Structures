@@ -1,0 +1,30 @@
+package ex4_ch7;
+
+import java.util.ArrayList;
+
+public class GateSystem {
+	private int maxCapacity;
+	private Car[] cars;
+	private int currentSize;
+	public GateSystem(int maxCapacity){
+		this.maxCapacity = maxCapacity;
+		cars = new Car[maxCapacity];
+		currentSize = 0;
+	}
+	
+	public boolean checkIfFull(){
+		if(currentSize > maxCapacity){
+			return true;
+		}
+		return false;
+	}
+	public void enterCar(Car car){
+		if(!checkIfFull())
+		cars[currentSize++] = car; 
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

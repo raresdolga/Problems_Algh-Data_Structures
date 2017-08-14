@@ -1,0 +1,24 @@
+package ex4_ch7;
+
+public class Ticket {
+	private Date enteredTime;
+	private Date payedTime;
+	private int amountPayed;
+	public Ticket(Date now, Date period, int amountPayed){
+		enteredTime = now;
+		payedTime = period;
+		this.amountPayed = amountPayed;
+	}
+	
+	public Date getEnteredTime(){
+		return enteredTime;
+	}
+	
+	public Date getPayedTime(){
+		return payedTime;
+	}
+	
+	public int getAmountPayed(){
+		return amountPayed;
+	}
+}

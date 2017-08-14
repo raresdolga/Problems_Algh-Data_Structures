@@ -1,0 +1,48 @@
+package ex4_ch7;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+
+public class GateSystem {
+	private int maxCapacity;
+	private ArrayList<Car> cars;
+	LocalDateTime today = LocalDateTime.now();
+	
+	public GateSystem(int maxCapacity){
+		this.maxCapacity = maxCapacity;
+		cars = new ArrayList<>(maxCapacity);
+	}
+	
+	public boolean checkIfFull(){
+		if(cars.size() > maxCapacity){
+			return true;
+		}
+		return false;
+	}
+	
+	public Ticket pay(Date period){
+		Date now = new Date();
+		now.day = today.getDayOfMonth();
+		now.hour = today.getHour();
+		now.minute = today.getMinute();
+		Date endTime = new Date();
+		endTime.minute = (now.minute + period.minute)%60;
+		endTime.hour = (now.hour + period.hour)%24;
+		endTime.hour += (now.minute + period.minute)/60;
+		endTime.day = (now.day + period.day);
+		endTime.day += (now.hour + period.hour)/24;
+		
+		Ticket t = new Ticket();
+	}
+	public void enterCar(Car car){
+		if(!checkIfFull())
+		cars.add(car); 
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
