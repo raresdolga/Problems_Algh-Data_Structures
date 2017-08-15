@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<item value="D:\Users\Rares\Documents\Algorithm_Questions\Java" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="false" key="SortMembers.sort_all"/>
+	<section name="SelfEncapsulateFieldWizard">
+		<item value="false" key="GenerateJavadoc"/>
+	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>
