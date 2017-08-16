@@ -1,0 +1,10 @@
+package ex6_Ch7;
+
+public class Edge {
+	public PuzzlePiece parrent;
+	public Shape shape;
+	
+	public Edge(){
+		
+	}
+}
