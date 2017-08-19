@@ -1,0 +1,9 @@
+package ex10_ch7;
+
+public class UnitSquare {
+	public boolean has_bomb;
+	public int nr_neigh;
+	public boolean has_flag;
+	
+	Content
+}

@@ -1,0 +1,23 @@
+package ex10_ch7;
+
+public class MinesWeeper {
+	Board b;
+	UnitSquare[][] board;
+	public MinesWeeper(int size, int bombs){
+		b = new Board(size,bombs);
+		b.initializeGame();
+		board = b.getBoard();
+	}
+	
+	public void clickSquare(int row, int col){
+			if(board[row][col].has_bomb)
+				System.out.println("you have lost");
+			
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

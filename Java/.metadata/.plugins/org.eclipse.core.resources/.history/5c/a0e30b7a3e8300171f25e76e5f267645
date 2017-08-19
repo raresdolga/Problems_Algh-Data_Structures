@@ -1,0 +1,11 @@
+package ex8_Ch7;
+
+public class Game {
+	
+	private Board b;
+	private 
+	
+	public static void main(String[] args){
+		
+	}
+}

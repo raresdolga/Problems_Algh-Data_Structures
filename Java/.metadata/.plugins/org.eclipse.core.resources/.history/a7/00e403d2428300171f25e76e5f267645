@@ -1,0 +1,16 @@
+package ex8_Ch7;
+
+public class Board {
+	private int size;
+	private int[][] board;
+	
+	public Board(int size){
+		this.size = size;
+		board = new int[size][size];
+	}
+	
+	public void addPiece(int row, int col) throws ArrayIndexOutOfBoundException{
+		if(row < 0 || row >= size || col < 0 || row >= size)
+			
+	}
+}

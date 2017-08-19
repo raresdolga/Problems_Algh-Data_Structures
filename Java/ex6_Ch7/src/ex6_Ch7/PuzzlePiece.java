@@ -17,4 +17,13 @@ public class PuzzlePiece {
 	public void setOrientation(Orientation o, Edge e) {
 		pos.put(o,e);
 	}
+	
+	public Edge getEdge_byOr(Orientation o){
+		return pos.get(o);
+	}
+
+	public boolean isCorner() {
+		return isCorner;
+	}
+
 }

@@ -1,0 +1,20 @@
+package ex7_ch7;
+
+import java.util.ArrayList;
+
+public class System {
+	ArrayList<User> users;
+	ArrayList<User> current_users;
+	
+	public System(){
+		users = new ArrayList<>();
+		current_users = new ArrayList<>();
+	}
+	
+	
+	
+	public static void main(String[] args) {
+	
+	}
+
+}

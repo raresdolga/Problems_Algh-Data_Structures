@@ -1,0 +1,29 @@
+package ex10_ch7;
+
+import java.util.Random;
+
+public class Board {
+	private UnitSquare[][] board;
+	private int size;
+	private int nr_bombs;
+	
+	public Board(int size, int nr_bombs){
+		this.size = size;
+		board = new UnitSquare [size][size];
+		this.nr_bombs = nr_bombs;
+		// initialise board
+	}
+	
+	public void putBombs(){
+		Random rn = new Random();
+		int bomb, row, col;
+		for(int i = 0; i < nr_bombs; i++){
+			bomb = rn.nextInt((size - 1)*(size - 1));
+		    row = bomb/ (size - 1);
+		    col = bomb % (size - 1);
+		    board[row][col] = - 1;
+		}
+			
+	}
+	
+}

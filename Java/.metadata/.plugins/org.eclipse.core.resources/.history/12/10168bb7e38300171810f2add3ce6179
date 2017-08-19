@@ -1,0 +1,14 @@
+package ex10_ch7;
+
+public class Board {
+	private int[][] board;
+	private int size;
+	private int nr_bombs;
+	
+	public Board(int size, int nr_bombs){
+		this.size = size;
+		board = new int [size][size];
+		this.nr_bombs = nr_bombs;
+	}
+	
+}

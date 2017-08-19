@@ -1,0 +1,13 @@
+package ex10_ch7;
+
+public class MinesWeeper {
+	private int[][] board;
+	public MinesWeeper(int boardSize){
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

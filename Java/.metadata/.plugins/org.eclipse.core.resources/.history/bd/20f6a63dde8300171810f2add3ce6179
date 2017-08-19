@@ -1,0 +1,49 @@
+package ex9_ch7;
+
+import java.util.Iterator;
+
+public class CircularArray<T extends Comparable<T>> implements Iterable<T>{
+	private int size;
+	private T[] arr;
+	//head indicates to the first element
+	private int head = 0;
+	
+	public CircularArray(int size){
+		this.size = size;
+		//cannot directly instantiate  from T type
+		arr = (T[]) new Object[size];
+	}
+	
+	public CircularArray(T[] arr){
+		this.arr = arr;
+		this.size = arr.length;
+	}
+	
+	public Iterator<T> iterate(){
+		
+	}
+	
+	public int size(){
+		return size;
+	}
+	
+	
+	//insert method
+	
+	public void rotate(){
+		head += 1;
+		if(head >= size)
+			head %= size;
+	}
+
+	private static class IteratorCA<E> implements Iterator<E>{
+		private int index;
+		public IteratorCA(){
+			
+		}
+		public boolean hasNext(){
+			if(index < size + head)
+		}
+	}
+
+}

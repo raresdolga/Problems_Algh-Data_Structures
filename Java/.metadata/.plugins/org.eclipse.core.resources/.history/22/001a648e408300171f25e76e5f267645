@@ -1,0 +1,9 @@
+package ex8_Ch7;
+
+public enum Color {
+	Black(false),White(true);
+	private boolean b;
+	private Color(boolean b){
+		this.b = b;
+	}
+}

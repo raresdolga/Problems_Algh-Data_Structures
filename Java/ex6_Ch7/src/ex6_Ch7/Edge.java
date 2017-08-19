@@ -8,4 +8,6 @@ public class Edge {
 		this.parrent = parrent;
 		this.shape = shape;
 	}
+	
+	
 }

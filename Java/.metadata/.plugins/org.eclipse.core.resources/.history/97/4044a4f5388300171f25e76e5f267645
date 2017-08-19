@@ -1,0 +1,13 @@
+package ex7_ch7;
+
+public class Message {
+	private String Sender;
+	private String Receiver;
+	private String Message;
+	
+	public Message(String Sender, String Receiver, String Message){
+		this.Receiver = Receiver;
+		this.Sender = Sender;
+		this.Message = Message;
+	}
+}

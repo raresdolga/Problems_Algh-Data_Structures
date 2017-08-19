@@ -1,0 +1,22 @@
+package ex7_ch7;
+
+import java.util.ArrayList;
+
+public class User {
+	private String name;
+	private String user_name;
+	private ArrayList<User> friends;
+	private CommonGUI inter;
+	
+	public User(String name, String UserName){
+		this.name = name;
+		this.user_name = user_name;
+		friends = new ArrayList<>();
+		//set specific fields to the user
+		inter = new CommonGUI(this);
+	}
+	//gets called when user presses log in 
+	public void notifyObs(){
+		
+	}
+}

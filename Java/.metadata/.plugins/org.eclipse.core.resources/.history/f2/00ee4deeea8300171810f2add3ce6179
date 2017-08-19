@@ -1,0 +1,80 @@
+package ex10_ch7;
+
+import java.util.Random;
+
+public class Board {
+	private UnitSquare[][] board;
+	private int size;
+	private int nr_bombs;
+	
+	public Board(int size, int nr_bombs){
+		this.size = size;
+		board = new UnitSquare [size + 2][size + 2];
+		this.nr_bombs = nr_bombs;
+	}
+	
+	//template method
+	public final void initializeGame(){
+		// initialise board
+				int i, j;
+				for(i = 0; i < size; i++)
+					for(j = 0; j < size; j++){
+						board[i][j] = new UnitSquare();
+					}
+				putBombs();
+				make_border();
+				mark_neigh();
+	}
+	
+	private void putBombs(){
+		Random rn = new Random();
+		int bomb, row, col;
+		for(int i = 0; i < nr_bombs; i++){
+			bomb = rn.nextInt((size - 1)*(size - 1));
+		    row = bomb/ (size - 1);
+		    col = bomb % (size - 1);
+		    board[row][col].has_bomb = true ;
+		}		
+	}
+	
+	private void make_border(){
+		int i;
+		for(i = 0; i <= size; i++){
+			board[-1][i] = new UnitSquare();
+			board[i - 1][-1] = new UnitSquare();
+		}
+		
+		for(i = -1; i < size; i++){
+			board[size][i] = new UnitSquare();
+			board[i + 1][size] = new UnitSquare();
+		}
+	}
+	private void mark_neigh(){
+		int i,j;
+		for(i = 0; i < size; i++)
+			for(j = 0; j < size; j++){
+				if(!board[i][j].has_bomb)
+					board[i][j].bomb_neigh = count_neighBombs(i,j);
+			}
+	}
+	private int count_neighBombs(int row, int col){
+		int count = 0;
+		if(board[row - 1][col - 1].has_bomb)
+			count ++;
+		if(board[row - 1][col].has_bomb)
+			count ++;
+		if(board[row][col - 1].has_bomb)
+			count ++;
+		if(board[row + 1][col + 1].has_bomb)
+			count ++;
+		if(board[row + 1][col].has_bomb)
+			count ++;
+		if(board[row][col + 1].has_bomb)
+			count ++;
+		if(board[row - 1][col + 1].has_bomb)
+			count ++;
+		if(board[row + 1][col - 1].has_bomb)
+			count ++;
+		return count;
+	}
+}

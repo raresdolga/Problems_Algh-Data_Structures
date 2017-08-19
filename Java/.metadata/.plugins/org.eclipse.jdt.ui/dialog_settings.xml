@@ -101,7 +101,7 @@
 		</list>
 	</section>
 	<section name="AddGetterSetterDialog">
-		<item value="false" key="SortOrdering"/>
+		<item value="true" key="SortOrdering"/>
 		<item value="false" key="RemoveFinal"/>
 	</section>
 	<section name="JavaElementSearchActions">
