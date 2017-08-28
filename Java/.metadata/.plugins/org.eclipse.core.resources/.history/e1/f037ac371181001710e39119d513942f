@@ -1,5 +1,0 @@
-package ex3_Ch7;
-
-public class PlayList {
-	String name;
-}

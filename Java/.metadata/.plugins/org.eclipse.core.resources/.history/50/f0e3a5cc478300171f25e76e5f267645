@@ -1,6 +1,0 @@
-package ex8_Ch7;
-
-public class Player {
-	private String name;
-	private int score;
-}

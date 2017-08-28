@@ -1,0 +1,30 @@
+package e4_Ch8;
+
+import java.util.ArrayList;
+
+public class AllSubsets {
+	
+	public ArrayList<Integer> subsets(ArrayList<Integer> set){
+		int n = set.size();
+		ArrayList<Integer> partial;
+		if(n == 0){
+			partial = new ArrayList<>();
+			partial.add(0);
+			return partial;
+		}
+		
+		set.remove(n - 1);
+		partial = subsets(set);
+		ArrayList<Integer> temp = new ArrayList<>();
+		int val = 1 << n -1;
+;
+		for(int elem : partial){
+			 val = 			 
+		}
+	}
+	
+	public static void main(String args[]){
+		
+	}
+
+}

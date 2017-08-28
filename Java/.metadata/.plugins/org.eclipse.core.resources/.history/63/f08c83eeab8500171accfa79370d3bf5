@@ -1,0 +1,42 @@
+package ex11_ch7;
+
+public abstract class Common {
+	private String name;
+	private int size;
+	private String parent;
+	private Scale s;
+	public Common(String name, int size, String parent){
+		this.name = name;
+		this.size = size;
+		this.parent = parent;
+		s = Scale.KB;
+		increaseScale(size);
+	}
+	
+	public String getPath(){
+		return parent + "/" + this.name;
+	}
+	
+	public int getSize(){
+		return size;
+	}
+	
+	public void increaseScale(int val){
+		size += val;
+		int q = size/1024;
+		if(q == 0)
+			s = Scale.KB;
+		else
+		if(q == 1)
+			s = Scale.MB;
+		else
+		if(q == 2)
+			s = Scale.GB;
+		else
+			s = Scale.TB;
+	}
+	//hook method
+	public void addFile() {
+		throw new UnsupportedOperationException();
+	}
+}
