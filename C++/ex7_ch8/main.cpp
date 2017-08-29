@@ -16,14 +16,11 @@ vector<string> perm(char current[], int sz){
     int j;
     string temp;
     for(int i  = 0; i < old.size(); i++){
-        for(j = 0; j < (old.at(i)).size(); j++){
+        for(j = 0; j <= (old.at(i)).size(); j++){
             temp = old.at(i);
-            if(temp.at(j) != c.at(0))
-                param.push_back(temp.insert(j,c));
-        }
-        temp = old.at(i);
-        if(temp.at(j-1) != c.at(0))
             param.push_back(temp.insert(j,c));
+        }
+
     }
     return param;
  }
