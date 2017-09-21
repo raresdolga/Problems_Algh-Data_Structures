@@ -2,10 +2,7 @@
 
 using namespace std;
 int mini = 0;
-int gcmd(int m, int n){
-    if(m == 0) return n;
-    return gcmd(n%m,m);
-}
+
 int euclid(int a, int b)
 {
     int c;
@@ -60,7 +57,6 @@ int main()
         // start from 0
         children[a - 1].push_back(b - 1);
         parent[b - 1] = a - 1;
-
     }
     BFS(children, gcmd_parent, parent, key,nr_nodes);
     cout<<"\n";

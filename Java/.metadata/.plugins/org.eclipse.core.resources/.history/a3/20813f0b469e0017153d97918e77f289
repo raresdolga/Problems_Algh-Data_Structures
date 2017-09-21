@@ -1,0 +1,50 @@
+import java.util.ArrayList;
+
+public class Hamiltonia_Graph {
+	
+	public static boolean hP_path(int [][] adiacency, ArrayList<Integer> remain_nodes, int v){
+		if(remain_nodes.size() == 1)
+			return true;
+		boolean ans = false;
+		remain_nodes.remove(v);
+		int [][] copy = eliminate_edges(v,adiacency,remain_nodes);
+		/*int k,j;
+		for(k = 0; k < adiacency.length; k++){
+			for(j = 0; j < adiacency[k].length; j++)
+				System.out.print(adiacency[k][j] + " ");
+			System.out.println();
+		}*/
+		for(int n : remain_nodes){
+			System.out.println(n);
+			if(adiacency[v][n] != 0)
+				ans = ans || hP_path(copy,remain_nodes,n);
+		}
+		return ans;
+	}
+	
+	private static int[][] eliminate_edges(int v, int [][] adj,ArrayList<Integer>remain_nodes){
+		int [][] copy = new int [adj.length][adj.length];
+		int i, j;
+		for(i = 0; i < adj.length; i++){
+			for(j = 0; j < adj.length; j++)
+				copy[i][j] = adj[i][j];
+		}
+		for(int n : remain_nodes){
+			copy[n][v] = copy[v][n] = 0;
+		}
+		return copy;
+	}
+	public static void main(String args[]){
+		int n = 3;
+		int [][] adiacency = {
+				{0,1,1},
+				{1,0,1},
+				{1,1,0}
+		};
+		
+		ArrayList<Integer> nodes = new ArrayList<Integer>();
+		for(int i = 0; i < n; i++)
+			nodes.add(i);
+		System.out.println(hP_path(adiacency,nodes,0));
+	}
+}

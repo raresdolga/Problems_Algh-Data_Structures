@@ -1,0 +1,11 @@
+
+public class Hamiltonia_Graph {
+	
+	public boolean hP_path(int [][] adiacency){
+		boolean ans = false;
+		return ans;
+	}
+	public static void main(String args[]){
+		
+	}
+}

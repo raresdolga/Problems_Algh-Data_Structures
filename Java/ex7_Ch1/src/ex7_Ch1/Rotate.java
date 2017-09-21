@@ -9,7 +9,7 @@ public class Rotate {
 	private int [][] rot(int [][] a){
 		int i = 0, j = 0;
 		int n = a.length;
-		int [][] c =new int [n][n];
+		int [][] c = new int [n][n];
 		
 		for(i = 0; i< n; i++){
 			for(j = 0; j< n; j++)

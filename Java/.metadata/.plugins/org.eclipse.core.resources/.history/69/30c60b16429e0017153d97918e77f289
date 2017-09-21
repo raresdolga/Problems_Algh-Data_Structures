@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class Hamiltonia_Graph {
+	
+	public boolean hP_path(int [][] adiacency, ArrayList<Integer> remain_nodes, int v){
+		boolean ans = false;
+		remain_nodes.remove(v);
+		eliminate_edges(v,adiacency,remain_nodes);
+		for(int n : remain_nodes)
+			if(adiacency[v][n] != 0)
+				ans = ans || hP_path(adiacency,remain_nodes,n);
+		return ans;
+	}
+	
+	public void eliminate_edges(int v, int [][] adj,ArrayList<Integer>remain_nodes){
+		for(int n : remain_nodes){
+			adj[v][n]= adj[n][v] = 0;
+		}
+	}
+	public static void main(String args[]){
+		
+	}
+}
