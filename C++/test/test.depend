@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1507915946 source:d:\users\rares\documents\algorithm_questions\c++\test\main.cpp
+	<iostream>
+	<string>
+	<algorithm>
+	<climits>
+	<math.h>
+

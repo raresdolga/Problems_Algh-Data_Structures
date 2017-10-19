@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class dynamic {
+	
+	    public int longestConsecutive(int[] nums, int nr, int i) {
+	        if(i == -1)
+	            return 0;
+	        if(nums[i] - nr == 1)
+	            return 1 + longestConsecutive(nums, nums[i], i - 1);
+	        else {
+	            return Math.max(longestConsecutive(nums, nums[i], i -1), longestConsecutive(nums,nr, i-1));
+	        }
+	    }
+	    
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int i;
+        int [] a = new int[n];
+        for(i = 0; i < n; i++){
+            a[i] = in.nextInt();
+        }
+        dynamic test = new dynamic();
+        System.out.println(test.longestConsecutive(a,a[n-2],n-1));
+	}
+
+}

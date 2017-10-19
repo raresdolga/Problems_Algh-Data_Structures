@@ -205,9 +205,6 @@ private void split_node(Node<E> current){
       System.out.println("aici");
       restructure(parent);
     }
-    else if(parent.values.size() == 0){
-      parent = null;
-    }
   }
 
   public Node<E> treeMin(Node<E> current){
@@ -225,7 +222,6 @@ private void split_node(Node<E> current){
       now = null;
       aux = null;
       count = 1;
-      if( current == null) System.out.println("ce are???");
       if(current.values.contains(val))
         return current;
       Iterator<E> it = current.values.iterator();
