@@ -1,0 +1,64 @@
+class Solution {
+    public List<int[]> getSkyline(int[][] buildings) {
+        List<int[]> result = new ArrayList<>();
+         if(buildings.length == 0)
+            return result;
+        int []b = new int[2];
+        int j = 0,h =  buildings[0][2], last = buildings[0][1];
+        int aux = buildings[0][0];
+        while(j < buildings.length - 1){
+            while(j < buildings.length - 1 && (buildings[j][1] >= buildings[j + 1][0] && buildings[j][2] == buildings[j + 1][2])){
+                j++;
+            }
+           if(j >= buildings.length - 1)
+               break;
+             b[0] = aux;
+             b[1] = Math.max(buildings[j][2], h);
+            result.add(b);
+            System.out.println(b[1]);
+             if(buildings[j][0] == buildings[j + 1][0] && buildings[j][1] >= buildings[j + 1][1]){
+                h = Math.max(buildings[j][2],h);
+                System.out.println("sdsasadad");
+                j++;
+                continue;
+            }
+            if(buildings[j][1] >= buildings[j + 1][1] && buildings[j][2] >= buildings[j + 1][2]){
+                h = Math.max(buildings[j][2],h);
+                j++;
+                System.out.println("ssds");
+                continue;
+            }
+            last = buildings[j][1];
+            if(buildings[j][2] < buildings[j+1][2]){
+                 aux = buildings[j + 1][0];
+            }
+            else{
+                aux = buildings[j][1];
+            }
+            
+            // add here in case we need to skeep
+             
+            b = new int[2];
+            
+            if(buildings[j][1] < buildings[j + 1][0]){
+                b[0] = buildings[j][1];
+                b[1] = 0;
+                result.add(b);
+                aux = buildings[j + 1][0];
+            }
+            j++;
+            h = buildings[j][2];
+            b = new int[2];
+        }
+    
+        b[0] = aux;
+        b[1] = Math.max(h,buildings[j][2]);
+        result.add(b);
+        b = new int[2];
+            last = Math.max(buildings[j][1],last);
+        b[0] = last;
+        b[1] = 0;
+        result.add(b);
+        return result;
+    }
+}

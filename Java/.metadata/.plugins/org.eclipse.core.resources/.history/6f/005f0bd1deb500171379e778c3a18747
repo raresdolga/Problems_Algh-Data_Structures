@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.ArrayList;
+
+public class Solution {
+	public String longestSub(ArrayList<String> sub, String word){
+		HashMap<Character,ArrayList<Integer>> positions = new HashMap<>();
+		ArrayList<Integer> newArr = null;
+		for(int i = 0; i < word.length(); i++){
+			if(positions.containsKey(word.charAt(i))){
+				newArr = positions.get(word.charAt(i));
+				newArr.add(i);
+				positions.put(word.charAt(i), newArr);
+				
+			}
+			else{
+				newArr = new ArrayList<>();
+				newArr.add(i);
+				positions.put(word.charAt(i), newArr);
+			}
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

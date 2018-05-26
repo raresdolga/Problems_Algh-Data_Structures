@@ -9,7 +9,7 @@ class Solution {
         }
         int pos1 = 0, pos2 = 0;
         for(int i = 0; i < nums.length; i++){
-                if(map.containsKey(target - nums[i]) && map.get(target - nums[i]) != i]){
+                if(map.containsKey(target - nums[i]) && map.get(target - nums[i]) != i){
                 	pos1 = i;
                     pos2 = map.get(target - nums[i]);
                     break;
